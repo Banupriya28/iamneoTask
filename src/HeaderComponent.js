@@ -9,7 +9,7 @@ class HeaderComponent extends Component {
             <>
                 <div className="headerContainer">
                     <div className="leftPanel">
-                        <span className="tickets_span"><b>Tickets</b></span>
+                        <span className="ticketSpan"><b>Tickets</b></span>
                         <Button className={`iconBtn ${activeTab === 'all'}`} onClick={() => handleJob('all')}>ALL</Button>
                         <Dropdown
                             button
