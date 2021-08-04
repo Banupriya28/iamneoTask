@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderComponent from './HeaderComponent';
 import JobDetailsComponent from './JobDetailsComponent';
 import './App.css';
-import data from './OrdersJson.json';
+import data from './ApplicationJson.json';
 import 'semantic-ui-css/semantic.min.css';
 import { Grid } from 'semantic-ui-react';
 
@@ -49,7 +49,7 @@ class App extends React.Component {
 
     setTimeout(function () {
       this.setState({ reloading: false });
-    }.bind(this), 5000);
+    }.bind(this), 3000);
   }
 
   handlePosition = (e, obj) => {
@@ -66,7 +66,6 @@ class App extends React.Component {
         selectedCandidates,
       }
     });
-    console.log('rolleee', applicationDatas, appliedCandidates, asessmentTakenCandidates, interviewClearedCandidates, selectedCandidates)
   }
 
   handleReload = (name) => {
@@ -74,7 +73,7 @@ class App extends React.Component {
 
     setTimeout(function () {
       this.setState({ reloading: false });
-    }.bind(this), 5000);
+    }.bind(this), 3000);
   }
   render = () => {
     const { reloading, applicationDatas, positionList, selectedPosition, activeTab } = this.state;

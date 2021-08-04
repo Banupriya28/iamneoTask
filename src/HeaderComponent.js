@@ -27,7 +27,7 @@ class HeaderComponent extends Component {
                         <Button className={`iconBtn ${activeTab === 'refresh'}`} onClick={() => handleReload('refresh')}><Icon className="sync" /></Button>
                     </div>
                     <div className="rightPanel">
-                        <Search className="searchStyles" fluid onSearchChange={(e, obj) => searchHandler(e, obj)} />
+                        <Search className="searchStyles" placeholder="Search by name" fluid onSearchChange={(e, obj) => searchHandler(e, obj)} />
                         <Button><Icon className='setting' />Configurations</Button>
                         <div className="pageNoStyles">( 0 - 30 )</div>
                         <Button className="iconBtn"><Icon className='angle left' /></Button>

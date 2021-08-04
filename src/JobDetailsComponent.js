@@ -16,9 +16,9 @@ class JobDetailsComponent extends React.Component {
             <div className="orderDetails">
                 <div className="headerContent">{header} ( {data.length} )</div>
                 <Scrollbars style={{ height: 575 }} >
-                    {!reloading ? data && data.map((item) => {
+                    {!reloading ? data && data.map((item, index) => {
                         return (
-                            <div className="cardContainer">
+                            <div className="cardContainer" key={index + 1}>
                                 <div className="idStyles">{item.applicantId} <span className="applicationBtn">View Application</span></div>
                                 <div className="orderStyles">Applicant Name : {item.applicantName}</div>
                                 <div className="itemDetails">{item.experience !== 0 && <>Experience : {item.experience}</>}</div>
