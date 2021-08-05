@@ -4,6 +4,7 @@
             "applicantId": "#1",
             "applicantName": "Banupriya",
             "experience": "2 years",
+            "position": "Frontend Developer",
             "appliedDate": "May 31 2019 3:39PM",
             "assessmentDate": "Jun 01 2019 3:39PM",
             "role": "frontEndDeveloper"
@@ -12,6 +13,7 @@
             "applicantId": "#2",
             "applicantName": "Hemavathi",
             "experience": "2 years",
+            "position": "Java Developer",
             "appliedDate": "May 31 2019 3:39PM",
             "assessmentDate": "Jun 01 2019 3:39PM",
             "role": "javaDeveloper"  
@@ -20,6 +22,7 @@
             "applicantId": "#3",
             "applicantName": "Priya",
             "experience": "2 years",
+            "position": "React Developer",
             "appliedDate": "May 31 2019 3:39PM",
             "assessmentDate": "Jun 01 2019 3:39PM",
             "role": "reactDeveloper"
@@ -28,6 +31,7 @@
             "applicantId": "#4",
             "applicantName": "Aishwarya",
             "experience": "2 years",
+            "position": "Backend Developer",
             "appliedDate": "May 31 2019 3:39PM",
             "assessmentDate": "Jun 01 2019 3:39PM",
             "role": "backendDeveloper"
@@ -36,14 +40,16 @@
             "applicantId": "#5",
             "applicantName": "Karthick",
             "experience": "2 years",
+            "position": "Frontend Developer",
             "appliedDate": "May 31 2019 3:39PM",
             "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "FrontEndDeveloper"
+            "role": "frontEndDeveloper"
         },
         {
             "applicantId": "#6",
             "applicantName": "Indhumathi",
             "experience": "2 years",
+            "position": "Java Developer",
             "appliedDate": "May 31 2019 3:39PM",
             "assessmentDate": "Jun 01 2019 3:39PM",
             "role": "javaDeveloper"  
@@ -52,6 +58,7 @@
             "applicantId": "#7",
             "applicantName": "Mounika",
             "experience": "2 years",
+            "position": "React Developer",
             "appliedDate": "May 31 2019 3:39PM",
             "assessmentDate": "Jun 01 2019 3:39PM",
             "role": "reactDeveloper"  
@@ -60,14 +67,16 @@
             "applicantId": "#8",
             "applicantName": "Kumaresh",
             "experience": "2 years",
+            "position": "Backend Developer",
             "appliedDate": "May 31 2019 3:39PM",
             "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "backendDevloper"  
+            "role": "backendDeveloper"  
         },
         {
             "applicantId": "#9",
             "applicantName": "Sonu",
             "experience": "2 years",
+            "position": "Frontend Developer",
             "appliedDate": "May 31 2019 3:39PM",
             "assessmentDate": "Jun 01 2019 3:39PM",
             "role": "frontEndDeveloper"  
@@ -76,6 +85,7 @@
             "applicantId": "#10",
             "applicantName": "Kavitha",
             "experience": "2 years",
+            "position": "Java Developer",
             "appliedDate": "May 31 2019 3:39PM",
             "assessmentDate": "Jun 01 2019 3:39PM",
             "role": "javaDeveloper"  
@@ -84,6 +94,7 @@
             "applicantId": "#11",
             "applicantName": "Raja",
             "experience": "2 years",
+            "position": "React Developer",
             "appliedDate": "May 31 2019 3:39PM",
             "assessmentDate": "Jun 01 2019 3:39PM",
             "role": "reactDeveloper"  
@@ -92,127 +103,13 @@
             "applicantId": "#12",
             "applicantName": "Manu",
             "experience": "2 years",
+            "position": "Backend Developer",
             "appliedDate": "May 31 2019 3:39PM",
             "assessmentDate": "Jun 01 2019 3:39PM",
             "role": "backendDeveloper"  
         }
     ],
-    "asessmentTakenCandidates": [ 
-        {
-            "applicantId": "#1",
-            "applicantName": "Banupriya",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "frontEndDeveloper"
-        },
-        {
-            "applicantId": "#2",
-            "applicantName": "Hemavathi",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "javaDeveloper"  
-        },
-        {
-            "applicantId": "#3",
-            "applicantName": "Priya",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "reactDeveloper"
-        },
-        {
-            "applicantId": "#4",
-            "applicantName": "Aishwarya",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "backendDeveloper"
-        },
-        {
-            "applicantId": "#9",
-            "applicantName": "Sonu",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "frontEndDeveloper"
-        },
-        {
-            "applicantId": "#10",
-            "applicantName": "Kavitha",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "javaDeveloper"  
-        },
-        {
-            "applicantId": "#11",
-            "applicantName": "Raja",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "reactDeveloper"  
-        },
-        {
-            "applicantId": "#12",
-            "applicantName": "Manu",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "backendDeveloper"  
-        }
-    ],
-    "interviewClearedCandidates": [
-        {
-            "applicantId": "#3",
-            "applicantName": "Priya",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "reactDeveloper"
-        },
-        {
-            "applicantId": "#4",
-            "applicantName": "Aishwarya",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "backendDeveloper"
-        },
-        {
-            "applicantId": "#9",
-            "applicantName": "Sonu",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "FrontEndDeveloper"
-        },
-        {
-            "applicantId": "#10",
-            "applicantName": "Kavitha",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "javaDeveloper"  
-        }
-    ],
-    "selectedCandidates": [ 
-        {
-            "applicantId": "#4",
-            "applicantName": "Aishwarya",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "backendDeveloper"
-        },
-        {
-            "applicantId": "#9",
-            "applicantName": "Sonu",
-            "experience": "2 years",
-            "appliedDate": "May 31 2019 3:39PM",
-            "assessmentDate": "Jun 01 2019 3:39PM",
-            "role": "FrontEndDeveloper"
-        }
-    ]
+    "asessmentTakenCandidates": [],
+    "interviewClearedCandidates": [],
+    "selectedCandidates": []
 }
