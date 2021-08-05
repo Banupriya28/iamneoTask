@@ -9,7 +9,7 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 class ApplicationDetails extends React.Component {
     constructor() {
         super();
-        this.state = {
+        this.state = { 
             applicationDatas: data,
             reloading: false,
             filteredRole: [],
@@ -25,11 +25,11 @@ class ApplicationDetails extends React.Component {
     }
 
     searchHandler = (e, { value }) => {
-        const { applicationDatas } = this.state;
-        const appliedCandidates = applicationDatas.appliedCandidates.filter((data) => data.applicantName.toLowerCase().includes(value.toLowerCase()));
-        const asessmentTakenCandidates = applicationDatas.asessmentTakenCandidates.filter((data) => data.applicantName.toLowerCase().includes(value.toLowerCase()));
-        const interviewClearedCandidates = applicationDatas.interviewClearedCandidates.filter((data) => data.applicantName.toLowerCase().includes(value.toLowerCase()));
-        const selectedCandidates = applicationDatas.selectedCandidates.filter((data) => data.applicantName.toLowerCase().includes(value.toLowerCase()));
+        const { applicationDatas } = this.state; 
+        const appliedCandidates = applicationDatas.appliedCandidates.filter((datas) => datas.applicantName.toLowerCase().includes(value.toLowerCase()));
+        const asessmentTakenCandidates = applicationDatas.asessmentTakenCandidates.filter((datas) => datas.applicantName.toLowerCase().includes(value.toLowerCase()));
+        const interviewClearedCandidates = applicationDatas.interviewClearedCandidates.filter((datas) => datas.applicantName.toLowerCase().includes(value.toLowerCase()));
+        const selectedCandidates = applicationDatas.selectedCandidates.filter((datas) => datas.applicantName.toLowerCase().includes(value.toLowerCase()));
 
         if (value !== '') {
             this.setState({
@@ -52,10 +52,10 @@ class ApplicationDetails extends React.Component {
     filteredCandidates = () => {
         const { applicationDatas, selectedPosition } = this.state;
         if (selectedPosition) {
-            const appliedCandidates = applicationDatas.appliedCandidates.filter((data) => data.role === selectedPosition);
-            const asessmentTakenCandidates = applicationDatas.asessmentTakenCandidates.filter((data) => data.role === selectedPosition);
-            const interviewClearedCandidates = applicationDatas.interviewClearedCandidates.filter((data) => data.role === selectedPosition);
-            const selectedCandidates = applicationDatas.selectedCandidates.filter((data) => data.role === selectedPosition);
+            const appliedCandidates = applicationDatas.appliedCandidates.filter((datas) => datas.role === selectedPosition);
+            const asessmentTakenCandidates = applicationDatas.asessmentTakenCandidates.filter((datas) => datas.role === selectedPosition);
+            const interviewClearedCandidates = applicationDatas.interviewClearedCandidates.filter((datas) => datas.role === selectedPosition);
+            const selectedCandidates = applicationDatas.selectedCandidates.filter((datas) => datas.role === selectedPosition);
             return {
                 appliedCandidates,
                 asessmentTakenCandidates,
@@ -111,17 +111,16 @@ class ApplicationDetails extends React.Component {
                 source.index,
                 destination.index
             );
-            // applicationDatas[source.droppableId] = items;
             applicationDatas = { ...applicationDatas, [source.droppableId]: items }
             this.setState({ applicationDatas });
         } else {
-            const result = this.move(
+            const results = this.move(
                 applicationDatas[source.droppableId],
                 applicationDatas[destination.droppableId],
                 source,
                 destination
             );
-            applicationDatas = { ...applicationDatas, [source.droppableId]: result[source.droppableId], [destination.droppableId]: result[destination.droppableId] }
+            applicationDatas = { ...applicationDatas, [source.droppableId]: results[source.droppableId], [destination.droppableId]: results[destination.droppableId] }
             this.setState({ applicationDatas });
         }
     }
