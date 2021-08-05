@@ -29,7 +29,7 @@ class JobDetailsComponent extends React.Component {
                                         <div className="idStyles">{item.applicantId} <span className="applicationBtn">View Application</span></div>
                                         <div className="orderStyles">Applicant Name : {item.applicantName}</div>
                                         <div className="divStyles">Position : {item.position}</div>
-                                        <div className="divStyles">{item.experience !== 0 && <>Experience : {item.experience}</>}</div>
+                                        <div className="divStyles">{item.experience !== 0 && <> Experience : {item.experience}</>}</div>
                                         <div className="dateStyles">Applied Date : {item.appliedDate}</div>
                                         <div className="dateStyles">Assessment Date : {item.appliedDate}</div>
                                     </div>
