@@ -70,7 +70,6 @@ class ApplicationDetails extends React.Component {
 
     handleReload = (name) => {
         this.setState({ reloading: true, activeTab: name });
-
         setTimeout(function () {
             this.setState({ reloading: false });
         }.bind(this), 400);
