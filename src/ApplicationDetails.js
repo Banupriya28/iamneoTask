@@ -99,7 +99,6 @@ class ApplicationDetails extends React.Component {
     };
 
     handleDragEnd = (result) => {
-        console.log('result', result);
         const { source, destination } = result;
         let { applicationDatas } = this.state;
         if (!destination) {
