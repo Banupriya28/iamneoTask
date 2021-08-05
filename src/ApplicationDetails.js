@@ -9,7 +9,7 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 class ApplicationDetails extends React.Component {
     constructor() {
         super();
-        this.state = { 
+        this.state = {
             applicationDatas: data,
             reloading: false,
             filteredRole: [],
@@ -30,7 +30,6 @@ class ApplicationDetails extends React.Component {
         const asessmentTakenCandidates = applicationDatas.asessmentTakenCandidates.filter((datas) => datas.applicantName.toLowerCase().includes(value.toLowerCase()));
         const interviewClearedCandidates = applicationDatas.interviewClearedCandidates.filter((datas) => datas.applicantName.toLowerCase().includes(value.toLowerCase()));
         const selectedCandidates = applicationDatas.selectedCandidates.filter((datas) => datas.applicantName.toLowerCase().includes(value.toLowerCase()));
-
         if (value !== '') {
             this.setState({
                 applicationDatas: {
