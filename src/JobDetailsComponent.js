@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import { Scrollbars } from 'react-custom-scrollbars';
+// import { Scrollbars } from 'react-custom-scrollbars';
 import { Placeholder } from 'semantic-ui-react';
 
 class JobDetailsComponent extends React.Component {
@@ -15,20 +15,11 @@ class JobDetailsComponent extends React.Component {
 
     render = () => {
       const { holderLength } = this.state;
-      const { header, reloading, data } = this.props;
+      const { reloading, data } = this.props;
       return (
-        <div className="orderDetails">
-          <div className="headerContent">
-            {header}
-            {' '}
-            (
-            {' '}
-            {data ? data.length : ''}
-            {' '}
-            )
-          </div>
-          <Scrollbars style={{ height: 575 }}>
-            {!reloading ? data && data.map((item, index) => (
+        <>
+          {!reloading
+            ? data && data.map((item, index) => (
               <Draggable key={item.applicantId} draggableId={item.applicantId} index={index}>
                 {(provided) => (
                   <div
@@ -56,7 +47,7 @@ class JobDetailsComponent extends React.Component {
                       <>
                         {' '}
                         Experience :
-                        {item.experience}
+                          {item.experience}
                       </>
                       )}
                     </div>
@@ -72,22 +63,21 @@ class JobDetailsComponent extends React.Component {
                 )}
               </Draggable>
             ))
-              : holderLength.map((a) => (
-                <div className="cardContainer borderStyles" key={a}>
-                  <Placeholder>
-                    <Placeholder.Header image>
-                      <Placeholder.Line />
-                      <Placeholder.Line />
-                    </Placeholder.Header>
-                    <Placeholder.Paragraph>
-                      <Placeholder.Line length="medium" />
-                      <Placeholder.Line length="short" />
-                    </Placeholder.Paragraph>
-                  </Placeholder>
-                </div>
-              ))}
-          </Scrollbars>
-        </div>
+            : holderLength.map((a) => (
+              <div className="cardContainer borderStyles" key={a}>
+                <Placeholder>
+                  <Placeholder.Header image>
+                    <Placeholder.Line />
+                    <Placeholder.Line />
+                  </Placeholder.Header>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length="medium" />
+                    <Placeholder.Line length="short" />
+                  </Placeholder.Paragraph>
+                </Placeholder>
+              </div>
+            ))}
+        </>
       );
     }
 }

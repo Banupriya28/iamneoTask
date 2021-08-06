@@ -109,7 +109,17 @@
             "role": "backendDeveloper"  
         }
     ],
-    "asessmentTakenCandidates": [],
+    "asessmentTakenCandidates": [
+        {
+            "applicantId": "#13",
+            "applicantName": "Banupriya",
+            "experience": "2 years",
+            "position": "Frontend Developer",
+            "appliedDate": "May 31 2019 3:39PM",
+            "assessmentDate": "Jun 01 2019 3:39PM",
+            "role": "frontEndDeveloper"
+        }
+    ],
     "interviewClearedCandidates": [],
     "selectedCandidates": []
 }
