@@ -5,7 +5,7 @@ import { Draggable } from 'react-beautiful-dnd';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { Placeholder } from 'semantic-ui-react';
 
-class JobDetailsComponent extends React.Component {
+class Row extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -87,4 +87,4 @@ class JobDetailsComponent extends React.Component {
     }
 }
 
-export default JobDetailsComponent;
+export default Row;
