@@ -55,7 +55,8 @@ class ApplicationDetails extends React.Component {
           interviewClearedCandidates,
           selectedCandidates,
         };
-      } return { ...applicationDatas };
+      }
+      return { ...applicationDatas };
     }
 
     handleJob = (name) => {
@@ -83,7 +84,8 @@ class ApplicationDetails extends React.Component {
           interviewClearedCandidates,
           selectedCandidates,
         };
-      } return { ...applicationDatas };
+      }
+      return { ...applicationDatas };
     }
 
     handlePosition = (e, obj) => {
