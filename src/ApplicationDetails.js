@@ -1,11 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-// import { Container } from 'semantic-ui-react';
-import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
-import JobDetailsComponent from './JobDetailsComponent';
+import { DragDropContext } from 'react-beautiful-dnd';
 import HeaderComponent from './HeaderComponent';
 import data from './ApplicationJson.json';
 import './App.css';
+import ColumnContainer from './ColumnContainer';
 
 class ApplicationDetails extends React.Component {
   constructor() {
@@ -119,7 +118,6 @@ class ApplicationDetails extends React.Component {
     };
 
     handleHorizontalDragging =(result) => {
-      console.log('result horizontal', result);
       const { source, destination } = result;
       let { headerList } = this.state;
       if (!destination) {
@@ -137,7 +135,6 @@ class ApplicationDetails extends React.Component {
     handleVerticalDragging =(result) => {
       const { source, destination } = result;
       let { applicationDatas } = this.state;
-      console.log('result vertical', result);
       if (!destination) {
         return;
       }
@@ -167,7 +164,6 @@ class ApplicationDetails extends React.Component {
 
     handleDragEnd = (result) => {
       const { type } = result;
-      console.log('result', type);
       if (type === 'COLUMN') {
         this.handleHorizontalDragging(result);
       } else if (type === 'ROW') {
@@ -193,48 +189,11 @@ class ApplicationDetails extends React.Component {
             activeTab={activeTab}
           />
           <DragDropContext onDragEnd={this.handleDragEnd}>
-            <Droppable droppableId="columns" type="COLUMN" direction="horizontal">
-              {(columnProvided) => (
-                <div
-                  ref={columnProvided.innerRef}
-                  {...columnProvided.droppableProps}
-                  className="droppableContainer"
-                >
-                  {headerList.map((header, index) => (
-                    <Draggable
-                      draggableId={header.columnId}
-                      index={index}
-                      key={header.columnId}
-                    >
-                      {(rowProvided) => (
-                        <div
-                          key={header.id}
-                          {...rowProvided.draggableProps}
-                          ref={rowProvided.innerRef}
-                          className="draggableColumn"
-                        >
-                          <div className="headerContent" {...rowProvided.dragHandleProps}>
-                            {`${header.text} (${filteredList[header.id] ? filteredList[header.id].length : ''}) `}
-                          </div>
-                          <Droppable droppableId={header.id} type="ROW">
-                            {(provided) => (
-                              <div ref={provided.innerRef}>
-                                <JobDetailsComponent
-                                  data={filteredList[header.id]}
-                                  reloading={reloading}
-                                />
-                                {provided.placeholder}
-                              </div>
-                            )}
-                          </Droppable>
-                          {columnProvided.placeholder}
-                        </div>
-                      )}
-                    </Draggable>
-                  ))}
-                </div>
-              )}
-            </Droppable>
+            <ColumnContainer
+              headerList={headerList}
+              filteredList={filteredList}
+              reloading={reloading}
+            />
           </DragDropContext>
         </div>
       );
