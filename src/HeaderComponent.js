@@ -1,7 +1,7 @@
 import React from 'react';
 import './HeaderComponent.css';
 import {
-  Button, Icon, Search, Dropdown,
+  Button, Icon, Dropdown, Input,
 } from 'semantic-ui-react';
 
 function HeaderComponent(props) {
@@ -31,7 +31,7 @@ function HeaderComponent(props) {
           <Button className={`iconBtn ${activeTab === 'refresh'}`} onClick={() => handleReload('refresh')}><Icon className="sync" /></Button>
         </div>
         <div className="rightPanel">
-          <Search className="searchStyles" placeholder="Search by name" onSearchChange={(e, obj) => searchHandler(e, obj)} />
+          <Input type="text" className="searchStyles" placeholder="Search by name" onChange={(e) => searchHandler(e.target.value)} />
           <Button>
             <Icon className="setting" />
             Configurations

@@ -26,35 +26,36 @@ class ApplicationDetails extends React.Component {
         { id: 'interviewClearedCandidates', text: 'interview attended candidates', columnId: 'interviewClearedCandidatesColumn' },
         { id: 'selectedCandidates', text: 'selected candidates', columnId: 'selectedCandidatesColumn' },
       ],
+      searchText: '',
     };
   }
 
-    searchHandler = (e, { value }) => {
-      const { applicationDatas } = this.state;
-      const appliedCandidates = applicationDatas.appliedCandidates.filter(
-        (datas) => datas.applicantName.toLowerCase().includes(value.toLowerCase()),
-      );
-      const asessmentTakenCandidates = applicationDatas.asessmentTakenCandidates.filter(
-        (datas) => datas.applicantName.toLowerCase().includes(value.toLowerCase()),
-      );
-      const interviewClearedCandidates = applicationDatas.interviewClearedCandidates.filter(
-        (datas) => datas.applicantName.toLowerCase().includes(value.toLowerCase()),
-      );
-      const selectedCandidates = applicationDatas.selectedCandidates.filter(
-        (datas) => datas.applicantName.toLowerCase().includes(value.toLowerCase()),
-      );
-      if (value !== '') {
-        this.setState({
-          applicationDatas: {
-            appliedCandidates,
-            asessmentTakenCandidates,
-            interviewClearedCandidates,
-            selectedCandidates,
-          },
-        });
-      } else {
-        this.setState({ applicationDatas: data });
-      }
+    searchHandler = (value) => {
+      this.setState({ searchText: value });
+    }
+
+    searchFilter = (applicationDatas) => {
+      const { searchText } = this.state;
+      if (searchText) {
+        const appliedCandidates = applicationDatas.appliedCandidates.filter(
+          (datas) => datas.applicantName.toLowerCase().includes(searchText.toLowerCase()),
+        );
+        const asessmentTakenCandidates = applicationDatas.asessmentTakenCandidates.filter(
+          (datas) => datas.applicantName.toLowerCase().includes(searchText.toLowerCase()),
+        );
+        const interviewClearedCandidates = applicationDatas.interviewClearedCandidates.filter(
+          (datas) => datas.applicantName.toLowerCase().includes(searchText.toLowerCase()),
+        );
+        const selectedCandidates = applicationDatas.selectedCandidates.filter(
+          (datas) => datas.applicantName.toLowerCase().includes(searchText.toLowerCase()),
+        );
+        return {
+          appliedCandidates,
+          asessmentTakenCandidates,
+          interviewClearedCandidates,
+          selectedCandidates,
+        };
+      } return { ...applicationDatas };
     }
 
     handleJob = (name) => {
@@ -175,7 +176,8 @@ class ApplicationDetails extends React.Component {
       const {
         reloading, positionList, selectedPosition, activeTab, headerList,
       } = this.state;
-      const filteredList = this.filteredCandidates();
+      let filteredList = this.filteredCandidates();
+      filteredList = this.searchFilter(filteredList);
 
       return (
         <div className="parentContainer">
