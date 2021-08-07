@@ -110,13 +110,10 @@ class ApplicationDetails extends React.Component {
       const sourceClone = Array.from(source);
       const destClone = Array.from(destination);
       const [removed] = sourceClone.splice(droppableSource.index, 1);
-
       destClone.splice(droppableDestination.index, 0, removed);
-
       const result = {};
       result[droppableSource.droppableId] = sourceClone;
       result[droppableDestination.droppableId] = destClone;
-
       return result;
     };
 
@@ -131,7 +128,6 @@ class ApplicationDetails extends React.Component {
         source.index,
         destination.index,
       );
-
       this.setState({ headerList });
     }
 
@@ -148,7 +144,6 @@ class ApplicationDetails extends React.Component {
           destination.index,
         );
         applicationDatas = { ...applicationDatas, [source.droppableId]: items };
-        this.setState({ applicationDatas });
       } else {
         const results = this.move(
           applicationDatas[source.droppableId],
@@ -161,8 +156,8 @@ class ApplicationDetails extends React.Component {
           [source.droppableId]: results[source.droppableId],
           [destination.droppableId]: results[destination.droppableId],
         };
-        this.setState({ applicationDatas });
       }
+      this.setState({ applicationDatas });
     }
 
     handleDragEnd = (result) => {
@@ -180,7 +175,6 @@ class ApplicationDetails extends React.Component {
       } = this.state;
       let filteredList = this.filteredCandidates();
       filteredList = this.searchFilter(filteredList);
-
       return (
         <div className="parentContainer">
           <HeaderComponent

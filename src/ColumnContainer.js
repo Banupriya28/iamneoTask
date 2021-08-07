@@ -4,9 +4,7 @@ import { Droppable } from 'react-beautiful-dnd';
 import Column from './Column';
 
 function ColumnContainer(props) {
-  const {
-    headerList, filteredList, reloading,
-  } = props;
+  const { headerList, filteredList, reloading } = props;
   return (
     <Droppable droppableId="columns" type="COLUMN" direction="horizontal">
       {(columnProvided) => (

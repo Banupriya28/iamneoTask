@@ -21,51 +21,32 @@ class Row extends React.Component {
       return (
         <div ref={reference}>
           <Scrollbars style={{ height: 575 }}>
-            {!reloading
-              ? data && data.map((item, index) => (
-                <Draggable key={item.applicantId} draggableId={item.applicantId} index={index}>
-                  {(provided) => (
-                    <div
-                      ref={provided.innerRef}
-                      {...provided.draggableProps}
-                      {...provided.dragHandleProps}
-                      className="cardContainer"
-                      key={index + 1}
-                    >
-                      <div className="idStyles">
-                        {item.applicantId}
-                        {' '}
-                        <span className="applicationBtn">View Application</span>
-                      </div>
-                      <div className="orderStyles">
-                        Applicant Name :
-                        {item.applicantName}
-                      </div>
-                      <div className="divStyles">
-                        Position :
-                        {item.position}
-                      </div>
-                      <div className="divStyles">
-                        {item.experience !== 0 && (
-                        <>
-                          {' '}
-                          Experience :
-                          {item.experience}
-                        </>
-                        )}
-                      </div>
-                      <div className="dateStyles">
-                        Applied Date :
-                        {item.appliedDate}
-                      </div>
-                      <div className="dateStyles">
-                        Assessment Date :
-                        {item.appliedDate}
-                      </div>
+            {!reloading ? data && data.map((item, index) => (
+              <Draggable key={item.applicantId} draggableId={item.applicantId} index={index}>
+                {(provided) => (
+                  <div
+                    ref={provided.innerRef}
+                    {...provided.draggableProps}
+                    {...provided.dragHandleProps}
+                    className="cardContainer"
+                    key={index + 1}
+                  >
+                    <div className="idStyles">
+                      {item.applicantId}
+                      <span className="applicationBtn">View Application</span>
                     </div>
-                  )}
-                </Draggable>
-              ))
+                    <div className="orderStyles">
+                      Applicant Name :
+                      {item.applicantName}
+                    </div>
+                    <div className="divStyles">{`Position : ${item.position}`}</div>
+                    <div className="divStyles">{`Experience : ${item.experience}`}</div>
+                    <div className="dateStyles">{`Applied Date : ${item.appliedDate}`}</div>
+                    <div className="dateStyles">{`Assessment Date : ${item.appliedDate}`}</div>
+                  </div>
+                )}
+              </Draggable>
+            ))
               : holderLength.map((a) => (
                 <div className="cardContainer borderStyles" key={a}>
                   <Placeholder>
