@@ -31,4 +31,4 @@ function Column(props) {
   );
 }
 
-export default Column;
+export default React.memo(Column);

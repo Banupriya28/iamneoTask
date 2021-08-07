@@ -18,4 +18,4 @@ function RowContainer(props) {
   );
 }
 
-export default RowContainer;
+export default React.memo(RowContainer);

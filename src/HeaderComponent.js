@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import './HeaderComponent.css';
 import {
   Button, Icon, Dropdown, Input,
@@ -9,6 +9,7 @@ function HeaderComponent(props) {
     handleReload,
     positionList, selectedPosition, handlePosition, handleJob, searchHandler, activeTab,
   } = props;
+  const handlePositionCallback = useCallback((e, obj) => handlePosition(e, obj), []);
   return (
     <>
       <div className="headerContainer">
@@ -21,7 +22,7 @@ function HeaderComponent(props) {
             labeled
             icon="filter"
             options={positionList}
-            onChange={(e, obj) => handlePosition(e, obj)}
+            onChange={handlePositionCallback}
             value={selectedPosition}
             placeholder="SELECT POSITION"
           />
@@ -43,4 +44,4 @@ function HeaderComponent(props) {
   );
 }
 
-export default HeaderComponent;
+export default React.memo(HeaderComponent);
