@@ -24,10 +24,7 @@ function Row(props) {
             {item.applicantId}
             <span className="applicationBtn">View Application</span>
           </div>
-          <div className="orderStyles">
-            Applicant Name : 
-            {item.applicantName}
-          </div>
+          <div className="orderStyles">{`Applicant Name : ${item.applicantName}`}</div>
           <div className="divStyles">{`Position : ${item.position}`}</div>
           <div className="divStyles">{`Experience : ${item.experience}`}</div>
           <div className="dateStyles">{`Applied Date : ${item.appliedDate}`}</div>
