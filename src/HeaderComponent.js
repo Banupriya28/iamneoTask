@@ -18,12 +18,10 @@ function HeaderComponent(props) {
           <Dropdown
             button
             className={`iconBtn icon ${activeTab === 'position'}`}
-            floating
             labeled
             icon="filter"
             options={positionList}
             onChange={(e, obj) => handlePosition(e, obj)}
-            search
             value={selectedPosition}
             placeholder="SELECT POSITION"
           />

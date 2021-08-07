@@ -2,29 +2,26 @@
     margin-right: 10px;
     font-size: 16px;
   }
-  
-  .headerContainer {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  
-  .rightPanel {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-  }
-  
-  .iconBtn {
-    background-color: rgb(230 234 236); 
-    color: rgb(66 94 123); 
-    border: 1px solid rgb(190 187 187 / 60%) !important;
-    font-weight: normal;
-  }
-  .pageNoStyles {
-    margin: 0px 5px 0px 5px;
-  }
-  .true {
-      background-color: teal !important;
-      color: white !important;
-  }
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.rightPanel {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.iconBtn {
+  background-color: rgb(230 234 236); 
+  color: rgb(66 94 123); 
+  border: 1px solid rgb(190 187 187 / 60%) !important;
+  font-weight: normal;
+}
+.pageNoStyles {
+  margin: 0px 5px 0px 5px;
+}
+.true {
+    background-color: teal !important;
+    color: white !important;
+}
